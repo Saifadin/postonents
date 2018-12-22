@@ -1,10 +1,27 @@
 {
   "name": "postonents",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Components for Emails",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Osamah Aldoaiss",
   "license": "MIT",
+  "module": "dist/postonents.esm.js",
+  "repository": {
+    "url": "https://github.com/Saifadin/postonents"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest --env=jsdom",
+    "test:watch": "yarn test -- --watch",
+    "start": "cp ./index.js ./dist/index.js && cross-env NODE_ENV=development rollup -w -c | tsc -w -p tsconfig.base.json",
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production tsc -p tsconfig.base.json  && rollup -c && rimraf compiled && cp ./index.js ./dist/index.js",
+    "prepublish": "yarn build",
+    "precommit": "lint-staged",
+    "size": "size-limit"
+  },
   "dependencies": {
     "prop-types": "^15.6.2"
   },
@@ -43,6 +60,7 @@
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-size-snapshot": "^0.7.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
+    "size-limit": "^0.21.0",
     "ts-jest": "^22.4.6",
     "tsc-watch": "^1.0.21",
     "tslint": "^5.11.0",
@@ -51,7 +69,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "prettier --trailing-comma es5 --single-quote --write",
+      "prettier",
       "git add"
     ]
   },
@@ -74,5 +92,15 @@
       "js",
       "json"
     ]
-  }
+  },
+  "size-limit": [
+    {
+      "path": "./dist/index.js",
+      "limit": "14 kB"
+    },
+    {
+      "path": "./dist/postonents.esm.js",
+      "limit": "14 kB"
+    }
+  ]
 }

@@ -1,2 +1,6 @@
 node_modules
 .vscode
+
+# Compiled files
+compiled
+dist

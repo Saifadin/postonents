@@ -32,8 +32,6 @@ const buildCjs = ({ env }) => ({
 });
 
 export default [
-  buildUmd({ env: 'production' }),
-  buildUmd({ env: 'development' }),
   buildCjs({ env: 'production' }),
   buildCjs({ env: 'development' }),
   {

@@ -1,0 +1,26 @@
+{
+  "./dist/postonents.cjs.production.js": {
+    "bundled": 496,
+    "minified": 387,
+    "gzipped": 224
+  },
+  "./dist/postonents.cjs.development.js": {
+    "bundled": 496,
+    "minified": 387,
+    "gzipped": 224
+  },
+  "dist/postonents.esm.js": {
+    "bundled": 239,
+    "minified": 213,
+    "gzipped": 131,
+    "treeshaked": {
+      "rollup": {
+        "code": 14,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 998
+      }
+    }
+  }
+}
