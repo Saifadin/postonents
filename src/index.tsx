@@ -1,1 +1,2 @@
-export * from './components/Header';
+export * from './Header';
+export * from './Container';

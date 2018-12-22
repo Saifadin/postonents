@@ -1,25 +1,25 @@
 {
   "./dist/postonents.cjs.production.js": {
-    "bundled": 496,
-    "minified": 387,
-    "gzipped": 224
+    "bundled": 1224,
+    "minified": 865,
+    "gzipped": 377
   },
   "./dist/postonents.cjs.development.js": {
-    "bundled": 496,
-    "minified": 387,
-    "gzipped": 224
+    "bundled": 1224,
+    "minified": 865,
+    "gzipped": 377
   },
   "dist/postonents.esm.js": {
-    "bundled": 239,
-    "minified": 213,
-    "gzipped": 131,
+    "bundled": 941,
+    "minified": 660,
+    "gzipped": 280,
     "treeshaked": {
       "rollup": {
-        "code": 14,
-        "import_statements": 14
+        "code": 28,
+        "import_statements": 28
       },
       "webpack": {
-        "code": 998
+        "code": 1045
       }
     }
   }
