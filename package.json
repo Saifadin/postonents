@@ -2,13 +2,23 @@
   "name": "postonents",
   "version": "0.0.1",
   "description": "Components for Emails",
-  "main": "dist/index.js",
   "author": "Osamah Aldoaiss",
   "license": "MIT",
-  "module": "dist/postonents.esm.js",
   "repository": {
     "url": "https://github.com/Saifadin/postonents"
   },
+  "keywords": [
+    "react",
+    "react-dom",
+    "emails",
+    "components",
+    "context",
+    "typescript",
+    "ui"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/postonents.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
