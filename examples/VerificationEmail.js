@@ -1,5 +1,7 @@
 import React from 'react';
 
+// These are the imports for storybook to work. The components would be imported like this:
+// import { Email, Container, Row, Column, Header, FullWidth, Footer, Text, Link, PostonentsProvider } from 'postonents';
 import { Email } from '../compiled/Email';
 import { Container } from '../compiled/Container';
 import { Row } from '../compiled/Row';
