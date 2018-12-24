@@ -8,16 +8,17 @@ import { Image } from './Image';
 
 export interface HeaderProps extends DefaultProps {
   logo?: string;
+  logoHeight?: number;
   title?: React.ReactNode;
 }
 
-export const Header: React.SFC<HeaderProps> = ({ logo, title, style, className, children }) => {
+export const Header: React.SFC<HeaderProps> = ({ logo, logoHeight, title, style, className, children }) => {
   return (
     <Container alignment="center" maxWidth="100%" className={className} style={style}>
       <Row>
         {logo ? (
           <Column small={12} style={{ textAlign: 'center' }}>
-            <Image src={logo} height={32} />
+            <Image src={logo} height={logoHeight} />
           </Column>
         ) : null}
         {title ? (

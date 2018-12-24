@@ -15,7 +15,7 @@ export interface LinkProps extends DefaultProps {
   type?: LinkStylesEnum;
 }
 
-export const Link: React.SFC<LinkProps> = ({ style, children, fullWidth, className, type }) => {
+export const Link: React.SFC<LinkProps> = ({ href, style, children, fullWidth, className, type }) => {
   const {
     colors: { text, primary, primaryBg, hollow },
     typo: { fontSize, lineHeight },
@@ -39,7 +39,7 @@ export const Link: React.SFC<LinkProps> = ({ style, children, fullWidth, classNa
   };
 
   return (
-    <a className={className} style={{ textAlign: 'center', ...linkStyles, ...style }}>
+    <a href={href} className={className} style={{ textAlign: 'center', ...linkStyles, ...style }}>
       {children}
     </a>
   );
