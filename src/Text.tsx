@@ -3,13 +3,9 @@ import React, { useContext } from 'react';
 import { DefaultProps, PostonentsTheme } from './types';
 import { PostonentsContext } from './ThemeContext';
 
-export interface TextProps extends DefaultProps {
-  fontSize?: number;
-  lineHeight?: number;
-  fontWeight?: number;
-}
+export interface TextProps extends DefaultProps {}
 
-export const Text: React.SFC<TextProps> = ({ style, className, children, fontSize, lineHeight, fontWeight }) => {
+export const Text: React.SFC<TextProps> = ({ style, className, children }) => {
   const {
     colors: { text },
     typo: { fontSize: themeSize, lineHeight: themeLineHeight },
@@ -20,9 +16,8 @@ export const Text: React.SFC<TextProps> = ({ style, className, children, fontSiz
       className={className}
       style={{
         color: text,
-        fontSize: fontSize || themeSize,
-        lineHeight: lineHeight ? `${lineHeight}px` : themeLineHeight,
-        fontWeight,
+        fontSize: themeSize,
+        lineHeight: themeLineHeight,
         ...style,
       }}>
       {children}

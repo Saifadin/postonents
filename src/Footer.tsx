@@ -10,11 +10,11 @@ export interface FooterProps extends DefaultProps {}
 
 export const Footer: React.SFC<FooterProps> = ({ style, className, children }) => {
   const {
-    colors: { footerBg },
+    colors: { footerBg, footerText },
   } = useContext<PostonentsTheme>(PostonentsContext);
 
   return (
-    <Container alignment="center" maxWidth="100%" className={className} style={{ backgroundColor: footerBg, ...style }}>
+    <Container alignment="center" maxWidth="100%" className={className} style={{ backgroundColor: footerBg, color: footerText, ...style }}>
       <Row>
         <Column small={12}>{children || null}</Column>
       </Row>

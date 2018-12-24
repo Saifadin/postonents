@@ -6,6 +6,7 @@ const DefaultTheme = {
     text: '#4c5b5c',
     bodyBg: '#fafafa',
     footerBg: '#4c5b5c',
+    footerText: 'white',
     primary: 'white',
     primaryBg: '#6699cc',
     hollow: '#4c5b5c',

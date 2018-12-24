@@ -10,6 +10,7 @@ export interface PostonentsColors {
   text?: string;
   bodyBg?: string;
   footerBg?: string;
+  footerText?: string;
   primary?: string;
   primaryBg?: string;
   hollow?: string;

@@ -5,7 +5,7 @@ import { Column } from './Column';
 import { DefaultProps } from './types';
 
 export interface ContainerProps extends DefaultProps {
-  alignment: string;
+  alignment?: string;
   maxWidth?: number | string;
 }
 

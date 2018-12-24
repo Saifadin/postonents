@@ -10,13 +10,12 @@ enum LinkStylesEnum {
 }
 
 export interface LinkProps extends DefaultProps {
-  fontWeight?: number;
   fullWidth?: boolean;
   href: string;
   type?: LinkStylesEnum;
 }
 
-export const Link: React.SFC<LinkProps> = ({ style, children, fontWeight, fullWidth, className, type }) => {
+export const Link: React.SFC<LinkProps> = ({ style, children, fullWidth, className, type }) => {
   const {
     colors: { text, primary, primaryBg, hollow },
     typo: { fontSize, lineHeight },
@@ -30,7 +29,6 @@ export const Link: React.SFC<LinkProps> = ({ style, children, fontWeight, fullWi
     borderRadius: 2,
     fontSize,
     lineHeight,
-    fontWeight,
     width: fullWidth ? '100%' : undefined,
     padding:
       type === LinkStylesEnum.PrimaryButton || type === LinkStylesEnum.HollowButton

@@ -6,7 +6,6 @@ import { PostonentsContext } from './ThemeContext';
 export interface EmailProps extends DefaultProps {
   lang: string;
   title: string;
-  bgcolor: string;
   headLinks: string;
   headStyles: string;
   bodyStyle: object;
