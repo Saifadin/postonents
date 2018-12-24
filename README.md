@@ -1,4 +1,4 @@
-![Postonent](https://user-images.githubusercontent.com/1507057/50406845-62927900-07cc-11e9-86dc-89a36ab0b331.png)
+![Postonent](https://user-images.githubusercontent.com/1507057/50406874-db91d080-07cc-11e9-9c39-8f7cb3b84170.png)
 
 A simple UI library for light-weight, highly customizably Email components. Remove the pain of writing emails, by writing the templates in React, then SSR them and pass the generated HTML to the Backend to send it out.
 
