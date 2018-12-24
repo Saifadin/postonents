@@ -1,5 +1,10 @@
-// export * from './Header';
 export * from './Email';
+export * from './Header';
+export * from './Footer';
 export * from './Container';
 export * from './Row';
+export * from './FullWidth';
 export * from './Column';
+export * from './Text';
+export * from './Link';
+export * from './Image';

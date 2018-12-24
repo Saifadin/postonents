@@ -6,26 +6,26 @@ import { DefaultProps } from './types';
 
 export interface ContainerProps extends DefaultProps {
   alignment: string;
-  maxWidth: number;
+  maxWidth?: number | string;
 }
 
-export const Container: React.SFC<ContainerProps> = ({ children, alignment, maxWidth, style, className }) => {
+export const Container: React.SFC<ContainerProps> = ({ children, alignment, maxWidth = 600, style, className }) => {
   return (
     <table className={className} style={{ margin: alignment === 'center' ? '0 auto' : '0', maxWidth, width: '100%', ...style }}>
       <tbody>
-        {React.Children.map(children, (child: any) => {
-          if (!child) return;
-          if (child.type === Row) return child;
-          if (child.type === Column) {
-            return <tr>{child}</tr>;
-          }
+        <tr>
+          <td>
+            {React.Children.map(children, (child: any) => {
+              if (!child) return;
+              if (child.type === Row) return child;
+              if (child.type === Column) {
+                return <Row>{child}</Row>;
+              }
 
-          return (
-            <tr>
-              <td>{child}</td>
-            </tr>
-          );
-        })}
+              return child;
+            })}
+          </td>
+        </tr>
       </tbody>
     </table>
   );
