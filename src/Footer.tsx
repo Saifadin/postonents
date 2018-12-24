@@ -1,28 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import { DefaultProps } from './types';
+import { DefaultProps, PostonentsTheme } from './types';
+import { PostonentsContext } from './ThemeContext';
 import { Container } from './Container';
 import { Row } from './Row';
 import { Column } from './Column';
 
-export interface FooterProps extends DefaultProps {
-  logo?: string;
-}
+export interface FooterProps extends DefaultProps {}
 
-export const Footer: React.SFC<FooterProps> = ({ logo, style, className, children }) => {
+export const Footer: React.SFC<FooterProps> = ({ style, className, children }) => {
+  const {
+    colors: { footerBg },
+  } = useContext<PostonentsTheme>(PostonentsContext);
+
   return (
-    <Container alignment="center" maxWidth="100%" className={className} style={style}>
+    <Container alignment="center" maxWidth="100%" className={className} style={{ backgroundColor: footerBg, ...style }}>
       <Row>
-        <Column small={12}>
-          {children || null}
-          {logo ? (
-            <Container alignment="center">
-              <Row>
-                <Column small={12}>{logo}</Column>
-              </Row>
-            </Container>
-          ) : null}
-        </Column>
+        <Column small={12}>{children || null}</Column>
       </Row>
     </Container>
   );

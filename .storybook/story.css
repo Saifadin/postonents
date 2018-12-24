@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-size: 14px;
-  line-height: 24px;
-}
-
 table {
   border-spacing: 0;
   border-collapse: collapse;

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import { DefaultProps } from './types';
+import { DefaultProps, PostonentsTheme } from './types';
+import { PostonentsContext } from './ThemeContext';
 
 export interface EmailProps extends DefaultProps {
   lang: string;
@@ -11,9 +12,12 @@ export interface EmailProps extends DefaultProps {
   bodyStyle: object;
 }
 
-// inspired by http://htmlemailboilerplate.com
 export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = '', children }) => {
-  // default nested 600px wide outer table container (see http://templates.mailchimp.com/development/html/)
+  const {
+    colors: { text, bodyBg },
+    typo: { fontFamily, fontSize, lineHeight },
+  } = useContext<PostonentsTheme>(PostonentsContext);
+
   return (
     <html lang={lang}>
       <head>
@@ -31,6 +35,11 @@ export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyl
           padding: 0,
           WebkitTextSizeAdjust: '100%',
           MsTextSizeAdjust: '100%',
+          backgroundColor: bodyBg,
+          color: text,
+          fontSize,
+          lineHeight,
+          fontFamily,
           ...bodyStyle,
         }}>
         {children}

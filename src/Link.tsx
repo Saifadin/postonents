@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import { DefaultProps } from './types';
+import { DefaultProps, PostonentsTheme } from './types';
+import { PostonentsContext } from './ThemeContext';
 
 enum LinkStylesEnum {
   Link = 'link',
@@ -9,23 +10,26 @@ enum LinkStylesEnum {
 }
 
 export interface LinkProps extends DefaultProps {
-  fontSize?: number;
-  lineHeight?: number;
   fontWeight?: number;
   fullWidth?: boolean;
   href: string;
   type?: LinkStylesEnum;
 }
 
-export const Link: React.SFC<LinkProps> = ({ style, children, fontSize, lineHeight, fontWeight, fullWidth, className, type }) => {
+export const Link: React.SFC<LinkProps> = ({ style, children, fontWeight, fullWidth, className, type }) => {
+  const {
+    colors: { text, primary, primaryBg, hollow },
+    typo: { fontSize, lineHeight },
+  } = useContext<PostonentsTheme>(PostonentsContext);
+
   let linkStyles = {
     display: 'inline-block',
-    color: type === LinkStylesEnum.PrimaryButton ? 'white' : '#4c5b5c',
-    backgroundColor: type === LinkStylesEnum.PrimaryButton ? '#6699cc' : 'transparent',
+    color: type === LinkStylesEnum.PrimaryButton ? primary : text,
+    backgroundColor: type === LinkStylesEnum.PrimaryButton ? primaryBg : 'transparent',
     textDecoration: 'none',
     borderRadius: 2,
     fontSize,
-    lineHeight: lineHeight ? `${lineHeight}px` : '24px',
+    lineHeight,
     fontWeight,
     width: fullWidth ? '100%' : undefined,
     padding:
@@ -33,7 +37,7 @@ export const Link: React.SFC<LinkProps> = ({ style, children, fontSize, lineHeig
         ? `${type === LinkStylesEnum.HollowButton ? 7 : 8}px 16px`
         : undefined,
     height: type === LinkStylesEnum.PrimaryButton || type === LinkStylesEnum.HollowButton ? 40 : undefined,
-    border: type === LinkStylesEnum.HollowButton ? '1px solid #4c5b5c' : undefined,
+    border: type === LinkStylesEnum.HollowButton ? `1px solid ${hollow}` : undefined,
   };
 
   return (

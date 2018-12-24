@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import { DefaultProps } from './types';
+import { DefaultProps, PostonentsTheme } from './types';
+import { PostonentsContext } from './ThemeContext';
 
 export interface TextProps extends DefaultProps {
   fontSize?: number;
@@ -9,8 +10,21 @@ export interface TextProps extends DefaultProps {
 }
 
 export const Text: React.SFC<TextProps> = ({ style, className, children, fontSize, lineHeight, fontWeight }) => {
+  const {
+    colors: { text },
+    typo: { fontSize: themeSize, lineHeight: themeLineHeight },
+  } = useContext<PostonentsTheme>(PostonentsContext);
+
   return (
-    <span className={className} style={{ fontSize, lineHeight: `${lineHeight}px`, fontWeight, ...style }}>
+    <span
+      className={className}
+      style={{
+        color: text,
+        fontSize: fontSize || themeSize,
+        lineHeight: lineHeight ? `${lineHeight}px` : themeLineHeight,
+        fontWeight,
+        ...style,
+      }}>
       {children}
     </span>
   );
