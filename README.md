@@ -2,7 +2,7 @@
 
 A simple UI library for light-weight, highly customizably Email components. Remove the pain of writing emails, by writing the templates in React, then SSR them and pass the generated HTML to the Backend to send it out.
 
-[![npm version](https://badge.fury.io/js/postonents.svg)](https://badge.fury.io/js/postonents) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Saifadin/postonents/issues)
+[![npm version](https://badge.fury.io/js/postonents.svg)](https://badge.fury.io/js/postonents) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Saifadin/postonents/issues) [![blazing](https://img.shields.io/badge/Status-Blazing%20%F0%9F%94%A5-brightgreen.svg)](https://github.com/Saifadin/postonents)
 
 ## Installation
 
