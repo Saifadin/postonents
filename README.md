@@ -30,6 +30,7 @@ Included in this package are the following components:
 - **`Header`**, **`Footer`**: Two Layout Components for Layouting
 - **`FullWidth`**: Basically a `Container` and a `Row`. For layouting on the top level, if different backgroundColors are wanted.
 - **`PostonentsProvider`**, **`PostonentsConsumer`** and **`PostonentContext`**: Multiple possible ways to access or change the internal Context for styling components.
+- **`renderEmail`**: A function that server-side renders your template and returns it as a string.
 
 ## Component API
 
@@ -83,6 +84,14 @@ All components generally have a `children`, a `className` and a `style` prop and
 | `logo`     | string | no       | src of log, if passed will render a logo horizontally centered at the top of the email |
 | `title`    | string | no       | if passed, will render the title, right under the logo.                                |
 | `children` | Node   | no       | For custom styling you can pass whatever you want                                      |
+
+### **`renderEmail(Template, emailData, headStyles)`**
+
+| Argument     | type   | required | description                                                               |
+| ------------ | ------ | -------- | ------------------------------------------------------------------------- |
+| `Template`   | Node   | yes      | The Template Component                                                    |
+| `emailData`  | object | no       | emailData will be spread as props to the uppermost component in your tree |
+| `headStyles` | string | no       | For global styling you can pass styles that go into the head here         |
 
 ## Theming
 
