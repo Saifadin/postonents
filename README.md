@@ -38,13 +38,13 @@ All components generally have a `children`, a `className` and a `style` prop and
 
 ### **`Email`**
 
-| Prop         | type   | required | description                                                                          |
-| ------------ | ------ | -------- | ------------------------------------------------------------------------------------ |
-| `lang`       | string | yes      | Will be added to the `html` tag                                                      |
-| `title`      | string | yes      | The `title` of the email                                                             |
-| `headLinks`  | string | no       | Any links in the `head` tag like fonts                                               |
-| `headStyles` | string | no       | Styles in the `head` tag, will automatically be wrapped in `<styles type="text/css>` |
-| `bodyStyle`  | object | no       | will be added to the styles of the `body` tag                                        |
+| Prop            | type                               | required | description                                                                                                      |
+| --------------- | ---------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
+| `lang`          | string                             | yes      | Will be added to the `html` tag                                                                                  |
+| `title`         | string                             | yes      | The `title` of the email                                                                                         |
+| `headAdditions` | array<{ type, children?, props? }> | no       | Needs to be an array, with a type (eg. `link`), props and maybe children, internally we do `React.createElement` |
+| `headStyles`    | string                             | no       | Styles in the `head` tag, will automatically be wrapped in `<styles type="text/css>`                             |
+| `bodyStyle`     | object                             | no       | will be added to the styles of the `body` tag                                                                    |
 
 ### **`Container`**
 

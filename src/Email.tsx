@@ -6,12 +6,16 @@ import { PostonentsContext } from './ThemeContext';
 export interface EmailProps extends DefaultProps {
   lang: string;
   title: string;
-  headLinks: string;
+  headLinks: Array<{
+    type: string;
+    children?: React.ReactNode;
+    props?: object;
+  }>;
   headStyles: string;
   bodyStyle: object;
 }
 
-export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = '', children }) => {
+export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = [], children }) => {
   const {
     colors: { text, bodyBg },
     typo: { fontFamily, fontSize, lineHeight },
@@ -23,8 +27,17 @@ export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyl
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
-        {headLinks}
-        {headStyles ? <style type="text/css">{headStyles}</style> : null}
+        {headLinks && headLinks.length > 0
+          ? headLinks.map(({ type, children = null, props }) => {
+              return React.createElement(type, { ...props }, children);
+            })
+          : null}
+        <style type="text/css">
+          {`* {
+            box-sizing: border-box;
+          }`}
+          {headStyles}
+        </style>
       </head>
       <body
         style={{
