@@ -39,7 +39,8 @@
     "json2mq": "^0.2.0",
     "prop-types": "^15.6.2",
     "react": "16.7.0-alpha.2",
-    "react-dom": "16.7.0-alpha.2"
+    "react-dom": "16.7.0-alpha.2",
+    "uniqid": "^5.0.3"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -53,6 +54,7 @@
     "@types/lodash": "^4.14.119",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
+    "@types/uniqid": "^4.1.2",
     "awesome-typescript-loader": "^3.4.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-annotate-pure-calls": "^0.4.0",

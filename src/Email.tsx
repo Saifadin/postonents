@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import uniqId from 'uniqid';
 
 import { DefaultProps, PostonentsTheme } from './types';
 import { PostonentsContext } from './ThemeContext';
@@ -29,7 +30,7 @@ export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyl
         <title>{title}</title>
         {headLinks && headLinks.length > 0
           ? headLinks.map(({ type, children = null, props }) => {
-              return React.createElement(type, { ...props }, children);
+              return React.createElement(type, { key: uniqId(), ...props }, children);
             })
           : null}
         <style type="text/css">

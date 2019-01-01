@@ -1447,6 +1447,11 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/uniqid@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@types/uniqid/-/uniqid-4.1.2.tgz#83c56995419696ffc6c7abd268177dac2c6f13c9"
+  integrity sha512-ZXl2rFZtJ6kdk7uureET6B3ebhoMhlJtiLRqhk5atKbc6YgabpxSjDZRPksbUdQT7ulIzg2X08e5esVJ2AAVkQ==
+
 "@types/unist@*", "@types/unist@^2.0.0":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.2.tgz#5dc0a7f76809b7518c0df58689cd16a19bd751c6"
@@ -10419,6 +10424,11 @@ union-value@^1.0.0:
     get-value "^2.0.6"
     is-extendable "^0.1.1"
     set-value "^0.4.3"
+
+uniqid@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/uniqid/-/uniqid-5.0.3.tgz#917968310edc868d50df6c44f783f32c7d80fac1"
+  integrity sha512-R2qx3X/LYWSdGRaluio4dYrPXAJACTqyUjuyXHoJLBUOIfmMcnYOyY2d6Y4clZcIz5lK6ZaI0Zzmm0cPfsIqzQ==
 
 unique-filename@^1.1.1:
   version "1.1.1"
