@@ -21,7 +21,15 @@ const VerificationEmail = ({ data }) => {
     <PostonentsProvider theme={{ typo: { fontFamily: 'Roboto, sans-serif' } }}>
       <Email
         title={`Verification email for ${email}`}
-        headLinks={`<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" />`}>
+        headLinks={[
+          {
+            type: 'link',
+            props: {
+              rel: 'stylesheet',
+              href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,700',
+            },
+          },
+        ]}>
         <Header logo="https://assets.airbnb.com/press/logos/NBC%20Logo.gif" logoHeight={50} style={{ marginBottom: 24 }} />
         <Container alignment="center">
           <Row>
