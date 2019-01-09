@@ -6,8 +6,6 @@ A simple UI library for light-weight, highly customizable Email components. Remo
 
 ## Installation
 
-_Disclaimer: You need to be on a React version larger then 16, for this library to work as we are using the new Context API._
-
 To start with `postonents` install:
 
 ```
