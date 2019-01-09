@@ -1,7 +1,7 @@
 // import React from 'react';
 
 export interface DefaultProps {
-  style?: object;
+  style?: React.CSSProperties;
   className?: string;
   children?: React.ReactNode;
 }

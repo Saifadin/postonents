@@ -13,7 +13,7 @@ const DefaultTheme = {
   },
   typo: {
     fontFamily: 'Helvetica, sans-serif',
-    fontSize: '14px',
+    fontSize: '16px',
     lineHeight: '24px',
     light: 300,
     normal: 400,

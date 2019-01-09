@@ -17,7 +17,6 @@ export const Container: React.SFC<ContainerProps> = ({ children, alignment, maxW
           <td>
             {React.Children.map(children, (child: any) => {
               if (!child) return;
-              if (child.type === Row) return child;
               if (child.type === Column) {
                 return <Row>{child}</Row>;
               }
