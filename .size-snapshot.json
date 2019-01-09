@@ -1,18 +1,18 @@
 {
   "./dist/postonents.cjs.production.js": {
-    "bundled": 10296,
-    "minified": 6408,
-    "gzipped": 2012
+    "bundled": 10104,
+    "minified": 6344,
+    "gzipped": 1996
   },
   "./dist/postonents.cjs.development.js": {
-    "bundled": 10296,
-    "minified": 6408,
-    "gzipped": 2012
+    "bundled": 10104,
+    "minified": 6344,
+    "gzipped": 1996
   },
   "dist/postonents.esm.js": {
-    "bundled": 9652,
-    "minified": 5839,
-    "gzipped": 1859,
+    "bundled": 9532,
+    "minified": 5775,
+    "gzipped": 1842,
     "treeshaked": {
       "rollup": {
         "code": 475,
