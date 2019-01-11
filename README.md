@@ -93,7 +93,7 @@ All components generally have a `children`, a `className` and a `style` prop and
 
 ## Theming
 
-If you do not have special and custom styling purposes, the default theme will be more then enough. But if you would like some more control, this is the theme that can be overriden, by passing it as a `theme` prop to `PostonentsProvider`, that need to be the first element:
+If you do not have special and custom styling purposes, the default theme will be more than enough. But if you would like some more control, this is the theme that can be overriden, by passing it as a `theme` prop to `PostonentsProvider`, that need to be the first element:
 
 ```jsx
 <PostonentsProvider theme={{ ... }}>
