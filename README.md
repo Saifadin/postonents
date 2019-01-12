@@ -129,4 +129,4 @@ const DefaultTheme = {
 
 ## Examples
 
-Coming soon!
+Examples will be added regularly and will be visible on [Github Pages](https://saifadin.github.io/postonents/)
