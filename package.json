@@ -33,7 +33,7 @@
     "precommit": "lint-staged",
     "size": "size-limit",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
