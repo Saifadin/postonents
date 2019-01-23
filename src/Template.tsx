@@ -16,7 +16,7 @@ export interface EmailProps extends DefaultProps {
   bodyStyle: object;
 }
 
-export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = [], children }) => {
+export const Template: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = [], children }) => {
   return (
     <PostonentsConsumer>
       {({ colors: { text, bodyBg }, typo: { fontFamily, fontSize, lineHeight } }: PostonentsTheme) => {
@@ -33,8 +33,38 @@ export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyl
                 : null}
               <style type="text/css">
                 {`* {
-            box-sizing: border-box;
-          }`}
+                  box-sizing: border-box;
+                }
+
+                .small-1 { width: calc(1 / 12 * 100%); }
+                .small-2 { width: calc(2 / 12 * 100%); }
+                .small-3 { width: calc(3 / 12 * 100%); }
+                .small-4 { width: calc(4 / 12 * 100%); }
+                .small-5 { width: calc(5 / 12 * 100%); }
+                .small-6 { width: calc(6 / 12 * 100%); }
+                .small-7 { width: calc(7 / 12 * 100%); }
+                .small-8 { width: calc(8 / 12 * 100%); }
+                .small-9 { width: calc(9 / 12 * 100%); }
+                .small-10 { width: calc(10 / 12 * 100%); }
+                .small-11 { width: calc(11 / 12 * 100%); }
+                .small-12 { width: calc(12 / 12 * 100%); }
+
+                @media (min-width: 600px) {
+                  .large-1 { width: calc(1 / 12 * 100%); }
+                  .large-2 { width: calc(2 / 12 * 100%); }
+                  .large-3 { width: calc(3 / 12 * 100%); }
+                  .large-4 { width: calc(4 / 12 * 100%); }
+                  .large-5 { width: calc(5 / 12 * 100%); }
+                  .large-6 { width: calc(6 / 12 * 100%); }
+                  .large-7 { width: calc(7 / 12 * 100%); }
+                  .large-8 { width: calc(8 / 12 * 100%); }
+                  .large-9 { width: calc(9 / 12 * 100%); }
+                  .large-10 { width: calc(10 / 12 * 100%); }
+                  .large-11 { width: calc(11 / 12 * 100%); }
+                  .large-12 { width: calc(12 / 12 * 100%); }
+                }
+
+                `}
                 {headStyles}
               </style>
             </head>
@@ -61,3 +91,5 @@ export const Email: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyl
     </PostonentsConsumer>
   );
 };
+
+export const Email = Template;

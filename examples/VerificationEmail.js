@@ -2,7 +2,7 @@ import React from 'react';
 
 // These are the imports for storybook to work. The components would be imported like this:
 // import { Email, Container, Row, Column, Header, FullWidth, Footer, Text, Link, PostonentsProvider } from 'postonents';
-import { Email } from '../compiled/Email';
+import { Email } from '../compiled/Template';
 import { Container } from '../compiled/Container';
 import { Row } from '../compiled/Row';
 import { Column } from '../compiled/Column';
@@ -34,12 +34,10 @@ const VerificationEmail = ({ data }) => {
         <Container alignment="center">
           <Row>
             <Column small={12}>
-              <Text fontSize={20} fontWeight={300}>
-                Hello,
-              </Text>
+              <Text>Hello,</Text>
             </Column>
             <Column small={12} style={{ marginBottom: 24 }}>
-              <Text fontSize={20} fontWeight={300}>
+              <Text>
                 You just registered with the following email: {email}. To verify this email please click on the link or the text link below.
               </Text>
             </Column>

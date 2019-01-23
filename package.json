@@ -40,7 +40,6 @@
     "prop-types": "^15.6.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",
-    "react-media": "^1.9.2",
     "uniqid": "^5.0.3"
   },
   "peerDependencies": {

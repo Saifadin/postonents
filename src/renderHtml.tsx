@@ -9,3 +9,5 @@ export const renderEmail = (Template: React.FunctionComponent, emailData: object
 
   return `${docType}${content}`;
 };
+
+export const renderHtml = renderEmail;

@@ -1,4 +1,4 @@
-export * from './Email';
+export * from './Template';
 export * from './Header';
 export * from './Footer';
 export * from './Container';
@@ -9,4 +9,4 @@ export * from './Text';
 export * from './Link';
 export * from './Image';
 export * from './ThemeContext';
-export * from './renderEmail';
+export * from './renderHtml';
