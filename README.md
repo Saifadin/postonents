@@ -130,3 +130,9 @@ const DefaultTheme = {
 ## Examples
 
 Examples will be added regularly and will be visible on [Github Pages](https://saifadin.github.io/postonents/)
+
+## FAQs
+
+**My columns are not showing up after sending them out**
+
+This happens a lot with Mandrill Users. Please refer to this [article in the HelpCenter](https://mandrill.zendesk.com/hc/en-us/articles/205582437-CSS-Inlining) and make sure automatic CSS inlining is deactivated.
