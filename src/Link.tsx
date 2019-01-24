@@ -32,7 +32,7 @@ export const Link: React.SFC<LinkProps> = ({ href, style, children, fullWidth, c
             type === LinkStylesEnum.PrimaryButton || type === LinkStylesEnum.HollowButton
               ? `${type === LinkStylesEnum.HollowButton ? 7 : 8}px 16px`
               : undefined,
-          height: type === LinkStylesEnum.PrimaryButton || type === LinkStylesEnum.HollowButton ? 40 : undefined,
+          minHeight: type === LinkStylesEnum.PrimaryButton || type === LinkStylesEnum.HollowButton ? 40 : undefined,
           border: type === LinkStylesEnum.HollowButton ? `1px solid ${hollow}` : undefined,
         };
 
