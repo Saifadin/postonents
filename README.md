@@ -18,7 +18,7 @@ npm install --save postonents
 
 Included in this package are the following components:
 
-- **`Email`**: The Wrapper component, that generates the `<html>`, `<head>` and `<body>` tags with many customization possibilities like adding scripts and global styles.
+- **`Template`**: The Wrapper component, that generates the `<html>`, `<head>` and `<body>` tags with many customization possibilities like adding scripts and global styles.
 - **`Container`**: Component to generally wrap `Row`s. By default a max of 600px wide. (for the reason why see [here](http://templates.mailchimp.com/development/html/))
 - **`Row`**: Each row has 12 possible `Column`s, that wrap, if they are too big.
 - **`Column`**: A Column for content separation, can be customized for `small` (<600px) and `large` (>=600px).
@@ -28,13 +28,13 @@ Included in this package are the following components:
 - **`Header`**, **`Footer`**: Two Layout Components for Layouting
 - **`FullWidth`**: Basically a `Container` and a `Row`. For layouting on the top level, if different backgroundColors are wanted.
 - **`PostonentsProvider`**, **`PostonentsConsumer`** and **`PostonentContext`**: Multiple possible ways to access or change the internal Context for styling components.
-- **`renderEmail`**: A function that server-side renders your template and returns it as a string.
+- **`renderHtml`**: A function that server-side renders your template and returns it as a string.
 
 ## Component API
 
 All components generally have a `children`, a `className` and a `style` prop and this will be applied to the element that has the styling for easy overrides and customization
 
-### **`Email`**
+### **`Template`**
 
 | Prop            | type                               | required | description                                                                                                      |
 | --------------- | ---------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -83,7 +83,7 @@ All components generally have a `children`, a `className` and a `style` prop and
 | `title`    | string | no       | if passed, will render the title, right under the logo.                                |
 | `children` | Node   | no       | For custom styling you can pass whatever you want                                      |
 
-### **`renderEmail(Template, emailData, headStyles)`**
+### **`renderHtml(Template, emailData, headStyles)`**
 
 | Argument     | type   | required | description                                                               |
 | ------------ | ------ | -------- | ------------------------------------------------------------------------- |
@@ -97,9 +97,9 @@ If you do not have special and custom styling purposes, the default theme will b
 
 ```jsx
 <PostonentsProvider theme={{ ... }}>
-  <Email>
+  <Template>
     ...
-  </Email>
+  </Template>
 </PostonentsProvider>
 ```
 
