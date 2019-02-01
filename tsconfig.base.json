@@ -6,7 +6,7 @@
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
     "esModuleInterop": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "jsx": "react",
     "lib": ["es2015", "dom"],
     "module": "esnext",
