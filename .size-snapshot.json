@@ -10,9 +10,9 @@
     "gzipped": 2605
   },
   "dist/postonents.esm.js": {
-    "bundled": 14259,
-    "minified": 9364,
-    "gzipped": 2253,
+    "bundled": 15879,
+    "minified": 10965,
+    "gzipped": 2465,
     "treeshaked": {
       "rollup": {
         "code": 441,
