@@ -11,7 +11,10 @@ export interface ContainerProps extends DefaultProps {
 
 export const Container: React.SFC<ContainerProps> = ({ children, alignment, maxWidth = 600, style, className }) => {
   return (
-    <table className={className} style={{ margin: alignment === 'center' ? '0 auto' : '0', maxWidth, width: '100%', ...style }}>
+    <table
+      className={className}
+      width={typeof maxWidth === 'string' ? maxWidth : `${maxWidth}px`}
+      style={{ margin: alignment === 'center' ? '0 auto' : '0', ...style }}>
       <tbody>
         <tr>
           <td>

@@ -12,7 +12,14 @@ export const Column: React.SFC<ColumnProps> = ({ children, className, style, sma
   return (
     <td
       className={`small-${small} large-${large || small} ${className || ''}`}
-      style={{ position: 'relative', display: 'inline-block', padding: noPadding ? 0 : 8, ...style }}>
+      style={{
+        padding: noPadding ? 0 : 8,
+        boxSizing: 'border-box',
+        MozBoxSizing: 'border-box',
+        WebkitBoxSizing: 'border-box',
+        height: 'auto !important',
+        ...style,
+      }}>
       {children}
     </td>
   );

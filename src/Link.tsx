@@ -29,7 +29,7 @@ export const Link: React.SFC<LinkProps> = ({ href, style, children, fullWidth, c
           lineHeight,
           width: fullWidth ? '100%' : undefined,
           padding: type === 'primary' || type === 'hollow' ? `${type === 'hollow' ? 7 : 8}px 16px` : undefined,
-          minHeight: type === 'primary' || type === 'hollow' ? 40 : undefined,
+          height: type === 'primary' || type === 'hollow' ? 40 : undefined,
           border: type === 'hollow' ? `1px solid ${hollow}` : undefined,
         };
 
