@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import uniqId from 'uniqid';
 
 import { DefaultProps, PostonentsTheme } from './types';
@@ -7,13 +7,13 @@ import { PostonentsConsumer } from './ThemeContext';
 export interface EmailProps extends DefaultProps {
   lang: string;
   title: string;
-  headLinks: Array<{
+  headLinks?: Array<{
     type: string;
     children?: React.ReactNode;
     props?: object;
   }>;
-  headStyles: string;
-  bodyStyle: object;
+  headStyles?: string;
+  bodyStyle?: CSSProperties;
 }
 
 export const Template: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = [], children }) => {
@@ -80,7 +80,7 @@ export const Template: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyS
                 margin: 0,
                 padding: 0,
                 WebkitTextSizeAdjust: '100%',
-                MsTextSizeAdjust: '100%',
+                textSizeAdjust: '100%',
                 backgroundColor: bodyBg,
                 color: text,
                 fontSize,
