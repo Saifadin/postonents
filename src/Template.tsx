@@ -5,7 +5,7 @@ import { DefaultProps, PostonentsTheme } from './types';
 import { PostonentsConsumer } from './ThemeContext';
 
 export interface EmailProps extends DefaultProps {
-  lang: string;
+  lang?: string;
   title: string;
   headLinks?: Array<{
     type: string;
