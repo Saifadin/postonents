@@ -1,7 +1,7 @@
 import React from 'react';
 import { PostonentsTheme, DefaultProps } from './types';
 
-const DefaultTheme = {
+const DefaultTheme: PostonentsTheme = {
   colors: {
     text: '#4c5b5c',
     bodyBg: '#fafafa',
@@ -25,11 +25,11 @@ export const PostonentsContext = React.createContext<PostonentsTheme>(DefaultThe
 export const { Provider, Consumer: PostonentsConsumer } = PostonentsContext;
 
 interface ProviderType extends DefaultProps {
-  theme: PostonentsTheme;
+  theme?: PostonentsTheme;
 }
 
-export const PostonentsProvider: React.SFC<ProviderType> = ({ theme, children }) => {
-  const value = {
+export const PostonentsProvider: React.SFC<ProviderType> = ({ theme = {}, children }) => {
+  const value: PostonentsTheme = {
     colors: {
       ...DefaultTheme.colors,
       ...theme.colors,
