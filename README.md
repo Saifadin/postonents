@@ -14,6 +14,39 @@ yarn add postonents
 npm install --save postonents
 ```
 
+## Simple nodeJS setup
+
+To add postonents to a nodeJS application also add install `react` and `react-dom`.
+
+```
+yarn add react react-dom
+// or
+npm install --save react react-dom
+```
+
+This will allow you to write something like this to generate an html string that can be provided to services like sendinblue or mandrill.
+
+```jsx
+import React from 'react';
+import { renderHtml, Email, PostonentsProvider, Header } from 'postonents';
+
+const Email = ({ email }) => (
+  <PostonentsProvider>
+    <Email title={`Verification email for ${email}`}>
+      <Header logo="https://assets.airbnb.com/press/logos/NBC%20Logo.gif" logoHeight={50} style={{ marginBottom: 24 }} />
+    </Email>
+  </PostonentsProvider>
+);
+
+const getHtml = async () => {
+  const html = await renderHtml(Email, { email: 'test@test.com' });
+
+  return html;
+};
+
+// Now you can send the email with any email client library/service
+```
+
 ## Components included
 
 Included in this package are the following components:
