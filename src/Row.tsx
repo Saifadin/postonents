@@ -4,7 +4,7 @@ import { DefaultProps } from './types';
 
 export interface RowProps extends DefaultProps {}
 
-export const Row: React.SFC<RowProps> = ({ children, className, style }) => {
+export const Row: React.FC<RowProps> = ({ children, className, style }) => {
   return (
     <table className={className} width="100%" style={{ padding: 0, ...style }}>
       <tbody>

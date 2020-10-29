@@ -28,7 +28,7 @@ interface ProviderType extends DefaultProps {
   theme?: PostonentsTheme;
 }
 
-export const PostonentsProvider: React.SFC<ProviderType> = ({ theme = {}, children }) => {
+export const PostonentsProvider: React.FC<ProviderType> = ({ theme = {}, children }) => {
   const value: PostonentsTheme = {
     colors: {
       ...DefaultTheme.colors,

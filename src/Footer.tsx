@@ -8,7 +8,7 @@ import { Column } from './Column';
 
 export interface FooterProps extends DefaultProps {}
 
-export const Footer: React.SFC<FooterProps> = ({ style, className, children }) => {
+export const Footer: React.FC<FooterProps> = ({ style, className, children }) => {
   return (
     <PostonentsConsumer>
       {({ colors: { footerBg, footerText } }: PostonentsTheme) => {

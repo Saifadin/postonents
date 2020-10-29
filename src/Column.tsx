@@ -8,7 +8,7 @@ export interface ColumnProps extends DefaultProps {
   noPadding?: boolean;
 }
 
-export const Column: React.SFC<ColumnProps> = ({ children, className, style, small = 12, large, noPadding }) => {
+export const Column: React.FC<ColumnProps> = ({ children, className, style, small = 12, large, noPadding }) => {
   return (
     <td
       className={`small-${small} large-${large || small} ${className || ''}`}
