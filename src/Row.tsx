@@ -10,7 +10,9 @@ export const Row: React.FC<RowProps> = ({ children, className, style }) => {
       <tbody>
         <tr>
           {React.Children.map(children, (child: any) => {
-            if (!child) return;
+            if (!child) {
+              return;
+            }
 
             return child;
           })}

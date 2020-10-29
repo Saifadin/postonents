@@ -11,7 +11,7 @@ export const FullWidth: React.FC<FullWidthProps> = ({ style, className, children
   return (
     <Container alignment="center" maxWidth="100%" className={className} style={style}>
       <Row>
-        <Column noPadding small={12}>
+        <Column noPadding={true} small={12}>
           {children}
         </Column>
       </Row>
