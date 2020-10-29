@@ -19,7 +19,9 @@ export const Container: React.FC<ContainerProps> = ({ children, alignment, maxWi
         <tr>
           <td>
             {React.Children.map(children, (child: any) => {
-              if (!child) return;
+              if (!child) {
+                return;
+              }
               if (child.type === Column) {
                 return <Row>{child}</Row>;
               }
