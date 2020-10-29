@@ -16,7 +16,7 @@ export interface EmailProps extends DefaultProps {
   bodyStyle?: CSSProperties;
 }
 
-export const Template: React.SFC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = [], children }) => {
+export const Template: React.FC<EmailProps> = ({ lang, title, headStyles, bodyStyle, headLinks = [], children }) => {
   return (
     <PostonentsConsumer>
       {({ colors: { text, bodyBg }, typo: { fontFamily, fontSize, lineHeight } }: PostonentsTheme) => {

@@ -12,7 +12,7 @@ export interface HeaderProps extends DefaultProps {
   title?: React.ReactNode;
 }
 
-export const Header: React.SFC<HeaderProps> = ({ logo, logoHeight, title, style, className, children }) => {
+export const Header: React.FC<HeaderProps> = ({ logo, logoHeight, title, style, className, children }) => {
   return (
     <Container alignment="center" maxWidth="100%" className={className} style={style}>
       <Row>

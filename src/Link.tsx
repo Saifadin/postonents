@@ -15,7 +15,7 @@ export interface LinkProps extends DefaultProps {
   type?: 'link' | 'primary' | 'hollow' | LinkStylesEnum;
 }
 
-export const Link: React.SFC<LinkProps> = ({ href, style, children, fullWidth, className, type }) => {
+export const Link: React.FC<LinkProps> = ({ href, style, children, fullWidth, className, type }) => {
   return (
     <PostonentsConsumer>
       {({ colors: { text, primary, primaryBg, hollow }, typo: { fontSize, lineHeight } }: PostonentsTheme) => {

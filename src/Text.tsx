@@ -5,7 +5,7 @@ import { PostonentsConsumer } from './ThemeContext';
 
 export interface TextProps extends DefaultProps {}
 
-export const Text: React.SFC<TextProps> = ({ style, className, children }) => {
+export const Text: React.FC<TextProps> = ({ style, className, children }) => {
   return (
     <PostonentsConsumer>
       {({ colors: { text }, typo: { fontSize: themeSize, lineHeight: themeLineHeight } }: PostonentsTheme) => {

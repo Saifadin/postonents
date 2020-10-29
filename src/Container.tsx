@@ -9,7 +9,7 @@ export interface ContainerProps extends DefaultProps {
   maxWidth?: number | string;
 }
 
-export const Container: React.SFC<ContainerProps> = ({ children, alignment, maxWidth = 600, style, className }) => {
+export const Container: React.FC<ContainerProps> = ({ children, alignment, maxWidth = 600, style, className }) => {
   return (
     <table
       className={className}

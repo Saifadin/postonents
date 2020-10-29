@@ -7,7 +7,7 @@ import { Column } from './Column';
 
 export interface FullWidthProps extends DefaultProps {}
 
-export const FullWidth: React.SFC<FullWidthProps> = ({ style, className, children }) => {
+export const FullWidth: React.FC<FullWidthProps> = ({ style, className, children }) => {
   return (
     <Container alignment="center" maxWidth="100%" className={className} style={style}>
       <Row>
